@@ -1,0 +1,14 @@
+DEMfile ../inputs_30m/dem.asc
+resroot hyk
+dirroot results
+sim_time 604800
+initial_tstep 5.0
+massint 60
+saveint 600
+manningfile ../inputs_30m/manning.asc
+startfile ../inputs_30m/start_equilibrated_open.asc
+bcifile ../inputs_30m/boundary_open_base.bci
+bdyfile ../inputs_30m/flood_20210717_24.bdy
+acceleration
+voutput
+qoutput

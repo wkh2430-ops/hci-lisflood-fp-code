@@ -1,0 +1,105 @@
+{
+  "analysis_period": {
+    "start": "2021-07-17 00:00:00",
+    "end_inclusive": "2021-07-24 00:00:00",
+    "time_zone": "Asia/Shanghai (assumed; source files have no explicit offset)"
+  },
+  "formula": {
+    "Cq": "1/(1+exp(-beta*(Q/Qbank-1)))",
+    "HCI": "RSE_fixed*Cq",
+    "beta": 8.78889831,
+    "paper_parameterization_note": "The manuscript reports one normalized beta. The final hourly output was actually generated with the station-specific rounded legacy_k values below; these are the default for exact reproduction.",
+    "reproduction_implementation": "station_specific_legacy_k",
+    "reference_interval": {
+      "Ql": "0.75 Qbank",
+      "Qm": "Qbank",
+      "Qh": "1.25 Qbank"
+    }
+  },
+  "stations": {
+    "HYK": {
+      "name": "Huayuankou",
+      "Qbank_m3_s": 3680.0,
+      "Ql_m3_s": 2760.0,
+      "Qm_m3_s": 3680.0,
+      "Qh_m3_s": 4600.0,
+      "legacy_k_s_m3": 0.00239,
+      "RSE_fixed": 0.6469736982427422,
+      "reach_length_m": 10000
+    },
+    "JHT": {
+      "name": "Jiahetan",
+      "Qbank_m3_s": 1770.0,
+      "Ql_m3_s": 1327.5,
+      "Qm_m3_s": 1770.0,
+      "Qh_m3_s": 2212.5,
+      "legacy_k_s_m3": 0.00496,
+      "RSE_fixed": 0.9118805156195522,
+      "reach_length_m": 10000
+    },
+    "GC": {
+      "name": "Gaocun",
+      "Qbank_m3_s": 1420.0,
+      "Ql_m3_s": 1065.0,
+      "Qm_m3_s": 1420.0,
+      "Qh_m3_s": 1775.0,
+      "legacy_k_s_m3": 0.00619,
+      "RSE_fixed": 0.9244342238139359,
+      "reach_length_m": 10000
+    }
+  },
+  "sensitivity": {
+    "Qbank_factors": [
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2
+    ],
+    "beta_values": [
+      5.0,
+      7.0,
+      8.78889831,
+      10.0,
+      12.0
+    ],
+    "activation_ranges_Qbank": [
+      [
+        0.7,
+        1.3
+      ],
+      [
+        0.75,
+        1.25
+      ],
+      [
+        0.8,
+        1.2
+      ]
+    ],
+    "alpha_deltas": [
+      -0.05,
+      0,
+      0.05
+    ],
+    "n0_factors": [
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2
+    ],
+    "lambda_values": [
+      0.8,
+      1.0,
+      1.2,
+      1.5,
+      2.0
+    ],
+    "length_km": [
+      5,
+      10,
+      20
+    ]
+  }
+}

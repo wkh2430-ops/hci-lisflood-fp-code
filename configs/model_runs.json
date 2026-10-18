@@ -1,0 +1,50 @@
+{
+  "software": "LISFLOOD-FP 5.8.9 (verified from run.log; bundled executable not included)",
+  "common": {
+    "duration_s": 604800,
+    "initial_timestep_s": 5,
+    "mass_interval_s": 60,
+    "save_interval_s": 600,
+    "grid_resolution_m": 30,
+    "solver": "acceleration",
+    "velocity_output": true,
+    "discharge_output": true
+  },
+  "runs": {
+    "HYK": {
+      "par": "configs/lisflood/HYK.par",
+      "cfl": "program default",
+      "start": "equilibrated open-outlet depth grid",
+      "origin_id": "HYK_Experiment_20260917",
+      "status": "completed"
+    },
+    "JHT": {
+      "par": "configs/lisflood/JHT.par",
+      "cfl": 0.2,
+      "warmup_h": 48,
+      "origin_id": "JHT_Continuation_20260920",
+      "status": "completed"
+    },
+    "GC": {
+      "par": "configs/lisflood/GC.par",
+      "cfl": 0.2,
+      "scenario": "uncalibrated conceptual confined-channel, nominal width 630 m",
+      "origin_id": "GC_Conceptual_630m_20260923",
+      "status": "completed; not independently calibrated"
+    }
+  },
+  "particle": {
+    "release_start_s": 10800,
+    "release_end_s": 518400,
+    "release_interval_s": 10800,
+    "cohorts": 48,
+    "particles_per_cohort": 1000,
+    "tracking_duration_s": 86400,
+    "integration": "midpoint RK2",
+    "max_step_s": 10,
+    "spatial_interpolation": "bilinear",
+    "temporal_interpolation": "linear",
+    "wet_threshold_m": 0.01,
+    "randomness": "none; deterministic stratified flux-weighted release"
+  }
+}

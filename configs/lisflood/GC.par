@@ -1,0 +1,16 @@
+DEMfile ../inputs/dem.asc
+resroot run
+dirroot results
+sim_time 604800
+initial_tstep 5
+massint 60
+saveint 600
+manningfile ../inputs/manning.asc
+startfile ../inputs/start_equilibrated.asc
+bcifile ../inputs/boundary_base.bci
+bdyfile ../inputs/event.bdy
+acceleration
+cfl 0.2
+voutput
+qoutput
+elevoff
