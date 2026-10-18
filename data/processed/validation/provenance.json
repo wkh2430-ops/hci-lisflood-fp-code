@@ -1,0 +1,32 @@
+[
+  {
+    "scenario": "HYK",
+    "file": "particles/HYK/particle_cohorts.csv",
+    "sha256": "edb52b61de3ff9d334909138631ab4ba925fb78fb52cf5828908ff003f64db5c"
+  },
+  {
+    "scenario": "HYK",
+    "file": "particles/HYK/particle_outcomes.npz",
+    "sha256": "be1b45f47f8f9d306937df2755e574a1b7902d9e2f6a20facf72167b1457bdb8"
+  },
+  {
+    "scenario": "JHT",
+    "file": "particles/JHT/particle_cohorts.csv",
+    "sha256": "737a425b45596a23c5a48ec64875fb2e0e397726449af6747eb9d51668d141f0"
+  },
+  {
+    "scenario": "JHT",
+    "file": "particles/JHT/particle_outcomes.npz",
+    "sha256": "a631063ca917590e0d4967fa7b336423205e63af3d99f4f5f34f547d5c6404fd"
+  },
+  {
+    "scenario": "GC",
+    "file": "particles/GC/particle_cohorts.csv",
+    "sha256": "ce1c632e2c6d13749e50772b6d38d459d744bd887813a5431768ce387cc3cc0f"
+  },
+  {
+    "scenario": "GC",
+    "file": "particles/GC/particle_outcomes.npz",
+    "sha256": "ff45d9a0d6b7eb776bcd771970abf81665f2a4da31d80fdb94617cc99158cb7a"
+  }
+]

@@ -4,6 +4,8 @@
 
 The manuscript figures use the final calculation workbook `三站_20210717零点固定RSE_最终HCI结果.xlsx`. For each station, RSE is fixed at its value at 00:00 on 17 July 2021 and `HCI(t) = RSE_fixed × Cq(t)`.
 
+The normalized tables exported from this workbook are released in `data/processed/hci/`. They contain the hourly discharge used in the calculation, fixed RSE, Cq, HCI, activation parameters, station summaries, and event-stage boundaries. The original Excel workbook is retained outside the repository.
+
 ## Hydrological observations
 
 Hourly stage and discharge records were supplied for research use by the Yellow River Conservancy Commission of the Ministry of Water Resources and the Sanmenxia Water Control Project. The local source collections are identified by the authors as `水文资料` and `所需数据——河南大学`. Redistribution permission has not been established, so neither the observations nor hydrology-derived source tables are included here. The exact division of stations and variables between the two providers and the institutional access procedure must be confirmed before publication.

@@ -5,15 +5,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser()
-parser.add_argument('--hci',type=Path,required=True)
-parser.add_argument('--matched-cohorts',type=Path,required=True)
+parser.add_argument('--hci',type=Path,default=ROOT/'data/processed/hci/HCI_hourly.csv')
+parser.add_argument('--matched-cohorts',type=Path,default=ROOT/'data/processed/validation/matched_cohorts.csv')
 parser.add_argument('--output',type=Path,default=ROOT/'figures')
 args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
 colors={"HYK":"#1f77b4","JHT":"#e66101","GC":"#2ca02c"}
 h=pd.read_csv(args.hci,parse_dates=["time"])
+hci_column="HCI_ref" if "HCI_ref" in h else "HCI"
 fig,ax=plt.subplots(figsize=(8,3.8))
 for code,g in h.groupby("station_code"):
-    ax.plot(g.time,g.HCI_ref,label=code,color=colors[code],lw=1.7)
+    ax.plot(g.time,g[hci_column],label=code,color=colors[code],lw=1.7)
 ax.set(ylabel="HCI",xlabel="Time (2021)",ylim=(0,1));ax.legend(frameon=False,ncol=3);fig.tight_layout();fig.savefig(args.output/"reproduced_HCI_process.png",dpi=300);plt.close(fig)
 m=pd.read_csv(args.matched_cohorts)
 fig,ax=plt.subplots(figsize=(5,4))

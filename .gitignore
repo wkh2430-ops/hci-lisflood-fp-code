@@ -2,9 +2,11 @@ __pycache__/
 *.py[cod]
 .venv/
 results/
-data/
+data/*
+!data/processed/
+!data/processed/**
 inputs/
-analysis/
+/analysis/
 *.exe
 *.zip
 *.SAFE/
@@ -17,8 +19,9 @@ analysis/
 *.mass
 *.npy
 *.npz
+!data/processed/particles/**/*.npz
 *.xlsx
 *.xls
 *.csv
 !examples/*.csv
-
+!data/processed/**/*.csv

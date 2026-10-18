@@ -28,9 +28,9 @@
     "GC": {
       "par": "configs/lisflood/GC.par",
       "cfl": 0.2,
-      "scenario": "uncalibrated conceptual confined-channel, nominal width 630 m",
+      "scenario": "final main simulation using the observed approximately 630 m channel width",
       "origin_id": "GC_Conceptual_630m_20260923",
-      "status": "completed; not independently calibrated"
+      "status": "completed; final particle-validation scenario; not independently calibrated"
     }
   },
   "particle": {
